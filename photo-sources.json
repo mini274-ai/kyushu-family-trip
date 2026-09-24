@@ -1,0 +1,98 @@
+[
+  {
+    "slot": "hero-photo",
+    "file": "kyushu-hero-photo.jpg",
+    "caption": "유후인 긴린코의 물안개",
+    "title": "Lake Kinrin with Morning fog.jpg",
+    "author": "Tzu-hsun, Hsu",
+    "source": "https://commons.wikimedia.org/wiki/File:Lake_Kinrin_with_Morning_fog.jpg",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "date": "2009-11-18 05:47:39",
+    "changes": "Wikimedia thumbnail; displayed with responsive CSS cropping. No retouching."
+  },
+  {
+    "slot": "day1-photo",
+    "file": "kyushu-day1-photo.jpg",
+    "caption": "하카타역 · 도착 첫날의 도시 풍경",
+    "title": "Hakata Station at night 20180511.jpg",
+    "author": "そらみみ",
+    "source": "https://commons.wikimedia.org/wiki/File:Hakata_Station_at_night_20180511.jpg",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "date": "2018-05-11 19:46:55",
+    "changes": "Wikimedia thumbnail; displayed with responsive CSS cropping. No retouching."
+  },
+  {
+    "slot": "day2-photo",
+    "file": "kyushu-day2-photo.jpg",
+    "caption": "유후인 긴린코 · 겨울 호숫가 산책",
+    "title": "Kinrinko Panoramic.jpg",
+    "author": "G43",
+    "source": "https://commons.wikimedia.org/wiki/File:Kinrinko_Panoramic.jpg",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0",
+    "date": "2009-02-08",
+    "changes": "Wikimedia thumbnail; displayed with responsive CSS cropping. No retouching."
+  },
+  {
+    "slot": "day3-photo",
+    "file": "kyushu-day3-photo.jpg",
+    "caption": "벳푸 우미지옥 · 푸른 온천과 피어오르는 수증기",
+    "title": "Umijigoku.jpg",
+    "author": "Marc Heiden - User: (WT-shared) Gorilla Jones at  wts wikivoyage",
+    "source": "https://commons.wikimedia.org/wiki/File:Umijigoku.jpg",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "date": "2007-03",
+    "changes": "Wikimedia thumbnail; displayed with responsive CSS cropping. No retouching."
+  },
+  {
+    "slot": "day4-photo",
+    "file": "kyushu-day4-photo.jpg",
+    "caption": "오호리공원 · 호수 위의 우키미도",
+    "title": "Ukimido Hall of Ohori Park.JPG",
+    "author": "そらみみ (Soramimi)",
+    "source": "https://commons.wikimedia.org/wiki/File:Ukimido_Hall_of_Ohori_Park.JPG",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "date": "2015-09-27 16:03:51",
+    "changes": "Wikimedia thumbnail; displayed with responsive CSS cropping. No retouching."
+  },
+  {
+    "slot": "day5-photo",
+    "file": "kyushu-day5-photo.jpg",
+    "caption": "후쿠오카공항 국제선 · 여유 있게 귀국 준비",
+    "title": "Fukuoka Airport FUK international departures 2025-03-30.jpg",
+    "author": "ERIC  SALARD",
+    "source": "https://commons.wikimedia.org/wiki/File:Fukuoka_Airport_FUK_international_departures_2025-03-30.jpg",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+    "date": "30 March 2025",
+    "changes": "Wikimedia thumbnail; displayed with responsive CSS cropping. No retouching."
+  },
+  {
+    "slot": "hotel-fukuoka-photo",
+    "file": "kyushu-hotel-fukuoka-photo.jpg",
+    "caption": "미쓰이 가든 호텔 후쿠오카 기온 · 외관",
+    "title": "Mitsui Garden Hotel Fukuoka Gion 8-15 Hakata-ekimae 2-chōme Hakata-ku Fukuoka 20230801.jpg",
+    "author": "Hirho",
+    "source": "https://commons.wikimedia.org/wiki/File:Mitsui_Garden_Hotel_Fukuoka_Gion_8-15_Hakata-ekimae_2-ch%C5%8Dme_Hakata-ku_Fukuoka_20230801.jpg",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "date": "2023-08-01 15:31:11",
+    "changes": "Wikimedia thumbnail; displayed with responsive CSS cropping. No retouching."
+  },
+  {
+    "slot": "hotel-beppu-photo",
+    "file": "kyushu-hotel-beppu-photo.jpg",
+    "caption": "벳푸만과 시가지 · 숙소 지역 참고 사진",
+    "title": "Panorama view of Beppu.jpg",
+    "author": "STA3816",
+    "source": "https://commons.wikimedia.org/wiki/File:Panorama_view_of_Beppu.jpg",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "date": "2011-10-20",
+    "changes": "Wikimedia thumbnail; displayed with responsive CSS cropping. No retouching."
+  }
+]
