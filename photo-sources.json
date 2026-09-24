@@ -25,9 +25,7 @@
     "date": "2018-05-11 19:46:55",
     "changes": "Wikimedia thumbnail; displayed with responsive CSS cropping. No retouching.",
     "displayed": true,
-    "gallery_placements": [
-      "place-hakata"
-    ]
+    "gallery_placements": []
   },
   {
     "slot": "day2-photo",
@@ -41,9 +39,7 @@
     "date": "2009-02-08",
     "changes": "Wikimedia thumbnail; displayed with responsive CSS cropping. No retouching.",
     "displayed": true,
-    "gallery_placements": [
-      "place-kinrinko"
-    ]
+    "gallery_placements": []
   },
   {
     "slot": "day3-photo",
@@ -57,9 +53,7 @@
     "date": "2007-03",
     "changes": "Wikimedia thumbnail; displayed with responsive CSS cropping. No retouching.",
     "displayed": true,
-    "gallery_placements": [
-      "place-umijigoku"
-    ]
+    "gallery_placements": []
   },
   {
     "slot": "day4-photo",
@@ -73,9 +67,7 @@
     "date": "2015-09-27 16:03:51",
     "changes": "Wikimedia thumbnail; displayed with responsive CSS cropping. No retouching.",
     "displayed": true,
-    "gallery_placements": [
-      "place-ohori"
-    ]
+    "gallery_placements": []
   },
   {
     "slot": "day5-photo",
@@ -103,9 +95,7 @@
     "date": "2023-08-01 15:31:11",
     "changes": "Wikimedia thumbnail; displayed with responsive CSS cropping. No retouching.",
     "displayed": true,
-    "gallery_placements": [
-      "place-mitsui"
-    ]
+    "gallery_placements": []
   },
   {
     "slot": "hotel-beppu-photo",
@@ -119,9 +109,7 @@
     "date": "2011-10-20",
     "changes": "Wikimedia thumbnail; displayed with responsive CSS cropping. No retouching.",
     "displayed": true,
-    "gallery_placements": [
-      "place-suginoi"
-    ]
+    "gallery_placements": []
   },
   {
     "slot": "candidate-blossom",
@@ -225,19 +213,124 @@
     ]
   },
   {
-    "slot": "place-mantei",
-    "file": "kyushu-place-meal-reference.jpg",
-    "caption": "샤브샤브 식사 참고 사진 · 만테이 실제 메뉴·매장 사진 아님",
-    "title": "Shabu Shabu photo Don Ramey Logan.jpg",
-    "author": "Don Ramey Logan",
-    "source": "https://commons.wikimedia.org/wiki/File:Shabu_Shabu_photo_Don_Ramey_Logan.jpg",
+    "slot": "place-kinrinko",
+    "file": "kyushu-place-kinrinko.jpg",
+    "caption": "긴린코 · 호수 건너편 마을과 산",
+    "title": "Lake Kinrin 20221022-2.jpg",
+    "author": "Suicasmo",
+    "source": "https://commons.wikimedia.org/wiki/File:Lake_Kinrin_20221022-2.jpg",
     "license": "CC BY-SA 4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-    "date": "2022-02-23 18:41:49",
+    "date": "2022-10-22 15:34:54",
     "changes": "Wikimedia thumbnail; displayed with responsive CSS cropping; same image license applies.",
+    "displayed": true,
+    "gallery_placements": [
+      "place-kinrinko"
+    ]
+  },
+  {
+    "slot": "place-umijigoku",
+    "file": "kyushu-place-umijigoku.jpg",
+    "caption": "우미지옥 · 위에서 내려다본 온천과 관람로",
+    "title": "180131 Umi-Jigoku.jpg",
+    "author": "Totti",
+    "source": "https://commons.wikimedia.org/wiki/File:180131_Umi-Jigoku.jpg",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "date": "2018-01-31 11:27:33",
+    "changes": "Wikimedia thumbnail; displayed with responsive CSS cropping; same image license applies.",
+    "displayed": true,
+    "gallery_placements": [
+      "place-umijigoku"
+    ]
+  },
+  {
+    "slot": "place-hakata",
+    "file": "kyushu-place-hakata.jpg",
+    "caption": "하카타역 앞 광장 · JR 하카타 시티 입구",
+    "title": "Hakata Exit Station Square and JR Hakata City Hakata-eki-chūōgai Hakata-ku Fukuoka 20230811.jpg",
+    "author": "Hirho",
+    "source": "https://commons.wikimedia.org/wiki/File:Hakata_Exit_Station_Square_and_JR_Hakata_City_Hakata-eki-ch%C5%AB%C5%8Dgai_Hakata-ku_Fukuoka_20230811.jpg",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "date": "2023-08-11 14:55:28",
+    "changes": "Wikimedia thumbnail; displayed with responsive CSS cropping; same image license applies.",
+    "displayed": true,
+    "gallery_placements": [
+      "place-hakata"
+    ]
+  },
+  {
+    "slot": "place-ohori",
+    "file": "kyushu-place-ohori.jpg",
+    "caption": "오호리공원 · 간게쓰교와 호수",
+    "title": "Kangetsubashi Bridge in Ohori Park 2.JPG",
+    "author": "そらみみ (Soramimi)",
+    "source": "https://commons.wikimedia.org/wiki/File:Kangetsubashi_Bridge_in_Ohori_Park_2.JPG",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "date": "2015-09-27 15:52:29",
+    "changes": "Wikimedia thumbnail; displayed with responsive CSS cropping; same image license applies.",
+    "displayed": true,
+    "gallery_placements": [
+      "place-ohori"
+    ]
+  },
+  {
+    "slot": "place-suginoi",
+    "file": "kyushu-place-sorakan.jpg",
+    "caption": "스기노이 호텔 소라관 · 실제 외관",
+    "author": "ORIX Corporation / Suginoi Hotel",
+    "source": "https://digitalpr.jp/r/67249",
+    "image_url": "https://digitalpr.jp/simg/2255/67249/700_467_2023012310153963cddfbb0cf01.jpg",
+    "license": "Official promotional photograph. Copyright retained by the credited owner; not a Creative Commons or public-domain image. Source attribution is not a grant of reuse permission.",
+    "license_url": "https://digitalpr.jp/r/67249",
+    "changes": "Source image unchanged; responsive display crop.",
+    "displayed": true,
+    "gallery_placements": [
+      "place-suginoi"
+    ]
+  },
+  {
+    "slot": "place-mantei",
+    "file": "kyushu-place-mantei.png",
+    "caption": "만테이 하카타 기온점 · 샤브샤브 메뉴 예시",
+    "author": "能加万菜 / World Staff Co., Ltd.",
+    "source": "https://noukabanzai.jp/mantei/",
+    "image_url": "https://noukabanzai.jp/mantei/images/night3_hakata.png",
+    "license": "Official promotional photograph. Copyright retained by the credited owner; not a Creative Commons or public-domain image. Source attribution is not a grant of reuse permission.",
+    "license_url": "https://noukabanzai.jp/mantei/",
+    "changes": "Source image unchanged; responsive display crop.",
     "displayed": true,
     "gallery_placements": [
       "place-mantei"
     ]
+  },
+  {
+    "slot": "place-mitsui",
+    "file": "kyushu-place-mitsui-lobby.jpg",
+    "caption": "미쓰이 가든 호텔 후쿠오카 기온 · 로비",
+    "author": "Mitsui Fudosan Hotel Management Co., Ltd.",
+    "source": "https://www.gardenhotels.co.jp/fukuoka-gion/photogallery/",
+    "image_url": "https://www.gardenhotels.co.jp/assets/images/fukuoka-gion/photogallery/lobby_day.jpg",
+    "license": "Official promotional photograph. Copyright retained by the credited owner; not a Creative Commons or public-domain image. Source attribution is not a grant of reuse permission.",
+    "license_url": "https://www.gardenhotels.co.jp/fukuoka-gion/photogallery/",
+    "changes": "Source image unchanged; responsive display crop.",
+    "displayed": true,
+    "gallery_placements": [
+      "place-mitsui"
+    ]
+  },
+  {
+    "slot": "archived-meal-reference",
+    "file": "kyushu-place-meal-reference.jpg",
+    "caption": "이전 샤브샤브 참고 사진 · 현재 표시하지 않음",
+    "author": "Don Ramey Logan",
+    "source": "https://commons.wikimedia.org/wiki/File:Shabu_Shabu_photo_Don_Ramey_Logan.jpg",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "changes": "Wikimedia thumbnail; no retouching.",
+    "displayed": false,
+    "gallery_placements": []
   }
 ]
