@@ -17,9 +17,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hahmlet:wght@400;500;600;700;800&display=swap">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<script src="./image-slot.js"></script>
 <style>
 *{box-sizing:border-box}
-#top{min-height:360px!important;background:radial-gradient(ellipse at 90% 0%,#5B4A3D 0%,#2B2622 68%)!important}
 button:focus-visible,a:focus-visible{outline:3px solid #C2522C;outline-offset:3px}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important}}
 
@@ -697,7 +697,7 @@ a{color:#8E3A1E}a:hover{color:#C2522C}
 </footer>
 </main>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;mode&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;default&quot;:&quot;전체&quot;,&quot;options&quot;:[&quot;전체&quot;,&quot;일정 중심&quot;],&quot;tsType&quot;:&quot;&#x27;전체&#x27; | &#x27;일정 중심&#x27;&quot;,&quot;section&quot;:&quot;보기&quot;},&quot;photos&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;보기&quot;},&quot;textSize&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;default&quot;:&quot;보통&quot;,&quot;options&quot;:[&quot;보통&quot;,&quot;크게&quot;],&quot;tsType&quot;:&quot;&#x27;보통&#x27; | &#x27;크게&#x27;&quot;,&quot;section&quot;:&quot;보기&quot;}}">
+<script type="text/x-dc" data-dc-script data-props="{&quot;mode&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;default&quot;:&quot;전체&quot;,&quot;options&quot;:[&quot;전체&quot;,&quot;일정 중심&quot;],&quot;tsType&quot;:&quot;'전체' | '일정 중심'&quot;,&quot;section&quot;:&quot;보기&quot;},&quot;photos&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;보기&quot;},&quot;textSize&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;default&quot;:&quot;보통&quot;,&quot;options&quot;:[&quot;보통&quot;,&quot;크게&quot;],&quot;tsType&quot;:&quot;'보통' | '크게'&quot;,&quot;section&quot;:&quot;보기&quot;}}">
 const NAV_IDS = ['s1','s2','s3','s4','s5','s6','s7','s8','s9','s10'];
 const LS_KEY = 'kyushu-family-plan-checks-v1';
 class Component extends DCLogic {
@@ -731,7 +731,7 @@ class Component extends DCLogic {
   }
   renderVals() {
     const full = (this.props.mode ?? '전체') !== '일정 중심';
-    const photos = this.props.photos ?? false;
+    const photos = this.props.photos ?? true;
     const c = this.state.checks;
     const toggle = (e) => {
       const k = e.currentTarget.dataset.key;
