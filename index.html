@@ -58,6 +58,23 @@ a{color:#8E3A1E}a:hover{color:#C2522C}
 #places .place-photo{display:block;width:100%;height:100%;max-width:100%;object-fit:cover;-webkit-user-drag:none}
 #places .place-photo-note{display:block;margin-top:6px;font-size:11px;line-height:1.55;color:#766E64}
 #places .place-detail{display:inline-block;margin-top:4px;font-size:11.5px;line-height:1.6;text-underline-offset:3px}
+
+/* Natural Korean body wrapping; keep short headings and place names together. */
+main{container-type:inline-size;container-name:travel-plan;word-break:normal!important;overflow-wrap:anywhere!important}
+main p{text-wrap:wrap!important}
+main :where(section,article,figure){min-width:0}
+main :is(h1,h2,h3),.candidate-title-row,#places figcaption{word-break:keep-all;overflow-wrap:break-word}
+#top h1{font-size:clamp(24px,6.5vw,34px)!important;line-height:1.3!important}
+[data-plan-nav]{display:grid!important;grid-template-columns:repeat(6,minmax(0,1fr));gap:5px!important;padding:8px 12px!important;overflow:visible!important}
+[data-plan-nav] a{width:100%;justify-content:center;min-height:36px;height:auto!important;padding:6px 2px!important;font-size:11.5px!important;line-height:1.3;white-space:nowrap}
+main section[id]{scroll-margin-top:calc(var(--plan-nav-height,96px) + 12px)!important}
+.daily-budget{flex-wrap:wrap;row-gap:6px!important}
+.daily-budget>span:first-child{flex:1 1 170px;min-width:0}
+.daily-budget>span:last-child{flex:none;margin-left:auto}
+@container travel-plan (max-width:339px){[data-plan-nav]{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@container travel-plan (min-width:640px){[data-plan-nav]{grid-template-columns:repeat(11,minmax(0,1fr))}}
+@container travel-plan (max-width:380px){.plan-fact-row{grid-template-columns:64px minmax(0,1fr)!important;gap:10px!important}.plan-fact-row>span:first-child{word-break:keep-all}}
+@supports not (container-type:inline-size){@media(max-width:380px){[data-plan-nav]{grid-template-columns:repeat(4,minmax(0,1fr))}}}
 </style>
 </helmet>
 <main ref="{{ mainRef }}" style="max-width:680px;margin:0 auto;min-height:100vh;background:#F5F0E7;box-shadow:0 0 0 1px #E0D7C8;font-family:'Pretendard Variable',Pretendard,-apple-system,'Apple SD Gothic Neo','Malgun Gothic',sans-serif;color:#23201C;word-break:keep-all;overflow-wrap:break-word;-webkit-font-smoothing:antialiased">
@@ -79,7 +96,7 @@ a{color:#8E3A1E}a:hover{color:#C2522C}
 </div>
 </header>
 
-<nav data-plan-nav="1" style="position:sticky;top:0;z-index:20;display:flex;gap:6px;overflow-x:auto;padding:10px 16px;background:rgba(245,240,231,.9);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid #E5DCCD">
+<nav aria-label="여행 계획 목차" data-plan-nav="1" style="position:sticky;top:0;z-index:20;display:flex;gap:6px;overflow-x:auto;padding:10px 16px;background:rgba(245,240,231,.9);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid #E5DCCD">
 <a href="#s1" data-sec="s1" style="flex:none;display:inline-flex;align-items:center;height:32px;padding:0 12px;border-radius:999px;border:1px solid #DDD3C3;background:#FFFDF9;color:#3A342E;font-size:13px;font-weight:600;text-decoration:none;white-space:nowrap">한눈에</a>
 <sc-if value="{{ photos }}" hint-placeholder-val="{{ true }}"><a href="#places" data-sec="places" style="flex:none;display:inline-flex;align-items:center;height:32px;padding:0 12px;border-radius:999px;border:1px solid #DDD3C3;background:#FFFDF9;color:#3A342E;font-size:13px;font-weight:600;text-decoration:none;white-space:nowrap">장소</a></sc-if>
 <sc-if value="{{ full }}" hint-placeholder-val="{{ true }}"><a href="#s2" data-sec="s2" style="flex:none;display:inline-flex;align-items:center;height:32px;padding:0 12px;border-radius:999px;border:1px solid #DDD3C3;background:#FFFDF9;color:#3A342E;font-size:13px;font-weight:600;text-decoration:none;white-space:nowrap">날짜·항공</a></sc-if>
@@ -107,14 +124,14 @@ a{color:#8E3A1E}a:hover{color:#C2522C}
 </div>
 
 <div style="margin-top:26px;padding:4px 18px;background:#FFFDF9;border:1px solid #E5DCCD;border-radius:16px">
-<div style="display:grid;grid-template-columns:84px 1fr;gap:12px;padding:12px 0;font-size:14.5px;line-height:1.55"><span style="color:#6F675E;font-size:13px;padding-top:1px">여행 날짜</span><span><b>2027년 2월 24일 수요일 ~ 28일 일요일</b></span></div>
-<div style="display:grid;grid-template-columns:84px 1fr;gap:12px;padding:12px 0;border-top:1px solid #EFE8DC;font-size:14.5px;line-height:1.55"><span style="color:#6F675E;font-size:13px;padding-top:1px">출발 공항</span><span><b>김해공항 우선.</b> 수도권 거주 가족이 있다면 인천 출발·현지 합류도 별도 비교</span></div>
-<div style="display:grid;grid-template-columns:84px 1fr;gap:12px;padding:12px 0;border-top:1px solid #EFE8DC;font-size:14.5px;line-height:1.55"><span style="color:#6F675E;font-size:13px;padding-top:1px">항공</span><span>김해–후쿠오카 왕복 직항. 지나치게 이른 출발보다 오전 중·후반 출발편을 우선 비교</span></div>
-<div style="display:grid;grid-template-columns:84px 1fr;gap:12px;padding:12px 0;border-top:1px solid #EFE8DC;font-size:14.5px;line-height:1.55"><span style="color:#6F675E;font-size:13px;padding-top:1px">숙박</span><span>후쿠오카 1박 + 벳푸 1박 + 후쿠오카 2박 (체크인 3회)</span></div>
-<div style="display:grid;grid-template-columns:84px 1fr;gap:12px;padding:12px 0;border-top:1px solid #EFE8DC;font-size:14.5px;line-height:1.55"><span style="color:#6F675E;font-size:13px;padding-top:1px">후쿠오카 숙소</span><span><b>미쓰이 가든 호텔 후쿠오카 기온</b> — 트윈 2실 · 트리플 2실</span></div>
-<div style="display:grid;grid-template-columns:84px 1fr;gap:12px;padding:12px 0;border-top:1px solid #EFE8DC;font-size:14.5px;line-height:1.55"><span style="color:#6F675E;font-size:13px;padding-top:1px">벳푸 숙소</span><span><b>스기노이 호텔 소라관</b> — 트윈 2실 · 3인 사용 객실 2실. 세 번째 침구 확인 필수</span></div>
-<div style="display:grid;grid-template-columns:84px 1fr;gap:12px;padding:12px 0;border-top:1px solid #EFE8DC;font-size:14.5px;line-height:1.55"><span style="color:#6F675E;font-size:13px;padding-top:1px">이동</span><span>공항 왕복은 택시·예약차량, 지역 간 이동 이틀만 짐칸 있는 소형 관광버스</span></div>
-<div style="display:grid;grid-template-columns:84px 1fr;gap:12px;padding:12px 0;border-top:1px solid #EFE8DC;font-size:14.5px;line-height:1.55"><span style="color:#6F675E;font-size:13px;padding-top:1px">기념행사</span><span>후쿠오카 복귀일 저녁, 10인 예약 식사와 우주 딸의 새로운 출발을 축하하는 시간</span></div>
+<div class="plan-fact-row" style="display:grid;grid-template-columns:84px 1fr;gap:12px;padding:12px 0;font-size:14.5px;line-height:1.55"><span style="color:#6F675E;font-size:13px;padding-top:1px">여행 날짜</span><span><b>2027년 2월 24일 수요일 ~ 28일 일요일</b></span></div>
+<div class="plan-fact-row" style="display:grid;grid-template-columns:84px 1fr;gap:12px;padding:12px 0;border-top:1px solid #EFE8DC;font-size:14.5px;line-height:1.55"><span style="color:#6F675E;font-size:13px;padding-top:1px">출발 공항</span><span><b>김해공항 우선.</b> 수도권 거주 가족이 있다면 인천 출발·현지 합류도 별도 비교</span></div>
+<div class="plan-fact-row" style="display:grid;grid-template-columns:84px 1fr;gap:12px;padding:12px 0;border-top:1px solid #EFE8DC;font-size:14.5px;line-height:1.55"><span style="color:#6F675E;font-size:13px;padding-top:1px">항공</span><span>김해–후쿠오카 왕복 직항. 지나치게 이른 출발보다 오전 중·후반 출발편을 우선 비교</span></div>
+<div class="plan-fact-row" style="display:grid;grid-template-columns:84px 1fr;gap:12px;padding:12px 0;border-top:1px solid #EFE8DC;font-size:14.5px;line-height:1.55"><span style="color:#6F675E;font-size:13px;padding-top:1px">숙박</span><span>후쿠오카 1박 + 벳푸 1박 + 후쿠오카 2박 (체크인 3회)</span></div>
+<div class="plan-fact-row" style="display:grid;grid-template-columns:84px 1fr;gap:12px;padding:12px 0;border-top:1px solid #EFE8DC;font-size:14.5px;line-height:1.55"><span style="color:#6F675E;font-size:13px;padding-top:1px">후쿠오카 숙소</span><span><b>미쓰이 가든 호텔 후쿠오카 기온</b> — 트윈 2실 · 트리플 2실</span></div>
+<div class="plan-fact-row" style="display:grid;grid-template-columns:84px 1fr;gap:12px;padding:12px 0;border-top:1px solid #EFE8DC;font-size:14.5px;line-height:1.55"><span style="color:#6F675E;font-size:13px;padding-top:1px">벳푸 숙소</span><span><b>스기노이 호텔 소라관</b> — 트윈 2실 · 3인 사용 객실 2실. 세 번째 침구 확인 필수</span></div>
+<div class="plan-fact-row" style="display:grid;grid-template-columns:84px 1fr;gap:12px;padding:12px 0;border-top:1px solid #EFE8DC;font-size:14.5px;line-height:1.55"><span style="color:#6F675E;font-size:13px;padding-top:1px">이동</span><span>공항 왕복은 택시·예약차량, 지역 간 이동 이틀만 짐칸 있는 소형 관광버스</span></div>
+<div class="plan-fact-row" style="display:grid;grid-template-columns:84px 1fr;gap:12px;padding:12px 0;border-top:1px solid #EFE8DC;font-size:14.5px;line-height:1.55"><span style="color:#6F675E;font-size:13px;padding-top:1px">기념행사</span><span>후쿠오카 복귀일 저녁, 10인 예약 식사와 우주 딸의 새로운 출발을 축하하는 시간</span></div>
 </div>
 
 <div style="margin-top:14px;padding:22px 20px;background:#33415C;border-radius:16px;color:#F5F0E7">
@@ -292,7 +309,7 @@ a{color:#8E3A1E}a:hover{color:#C2522C}
 <p style="margin:14px 0 0;font-size:14px;line-height:1.7;color:#5E5750;text-wrap:pretty">Nintendo FUKUOKA는 <b style="color:#23201C">아뮤플라자 하카타 8층, 10~20시</b>. 혼잡 예상일에는 입장 정리권을 운영할 수 있어 여행일 안내를 다시 확인합니다.</p>
 <div style="margin-top:14px;padding:14px 16px;background:#EEE6D8;border-radius:12px;font-size:13.5px;line-height:1.65;color:#3A342E"><b>하루 운영</b> · 도보 약 2~4km(공항·역·상업시설 내부 이동 포함). 부모님이 피곤하면 하카타 쇼핑을 생략하고 호텔에서 쉽니다. 비가 오면 실내 상업시설만 이용하고, 항공 지연 시에는 <b>쇼핑을 가장 먼저 취소</b>합니다.</div>
 <div style="margin-top:10px;font-size:13.5px;line-height:1.6;color:#5E5750"><b style="color:#23201C">젊은 가족의 포인트</b> · 캐릭터 매장·게임 관련 상품 구경, 첫날 기념사진</div>
-<div style="margin-top:12px;display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding-top:12px;border-top:1px solid #E5DCCD"><span style="font-size:13px;color:#6F675E">일본 현지 당일 배정액 · 숙박 포함</span><span style="white-space:nowrap"><b style="font:700 16px/1 Hahmlet,serif">약 18만 엔</b> <span style="font-size:12.5px;color:#6F675E">≈ 171만 원</span></span></div>
+<div class="daily-budget" style="margin-top:12px;display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding-top:12px;border-top:1px solid #E5DCCD"><span style="font-size:13px;color:#6F675E">일본 현지 당일 배정액 · 숙박 포함</span><span style="white-space:nowrap"><b style="font:700 16px/1 Hahmlet,serif">약 18만 엔</b> <span style="font-size:12.5px;color:#6F675E">≈ 171만 원</span></span></div>
 </article>
 
 <article id="day2" data-screen-label="2일차" style="margin-top:44px;scroll-margin-top:64px">
@@ -314,7 +331,7 @@ a{color:#8E3A1E}a:hover{color:#C2522C}
 <p style="margin:14px 0 0;font-size:14px;line-height:1.7;color:#5E5750;text-wrap:pretty">유후인 체류는 약 3시간이지만 점심과 카페를 빼면 거리 관광은 <b style="color:#23201C">1시간 30분~2시간</b>입니다. 긴린코 전체와 모든 상점을 빠짐없이 돌겠다는 목표는 두지 않습니다.</p>
 <div style="margin-top:14px;padding:14px 16px;background:#EEE6D8;border-radius:12px;font-size:13.5px;line-height:1.65;color:#3A342E"><b>하루 운영</b> · 일반 참가자 도보 약 3~4km, 부모님 단축 코스 약 1.5~2.5km. 피곤하면 긴린코 산책을 생략하고 카페에서 차량을 기다립니다. 비가 오면 야외 산책을 줄이고 일찍 호텔에 들어갑니다.<br><br><b>눈·결빙으로 산간도로가 어렵다면</b> 유후인을 강행하지 않습니다. 후쿠오카 체류 연장 또는 운행 중인 교통편으로 벳푸 직행을 검토하되, 철도가 자동으로 대체된다고 가정하지 않습니다.</div>
 <div style="margin-top:10px;font-size:13.5px;line-height:1.6;color:#5E5750"><b style="color:#23201C">젊은 가족의 포인트</b> · 유후인 사진·디저트, 호텔 실내 놀이</div>
-<div style="margin-top:12px;display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding-top:12px;border-top:1px solid #E5DCCD"><span style="font-size:13px;color:#6F675E">일본 현지 당일 배정액 · 차량비 절반·숙박·가족탕 포함</span><span style="white-space:nowrap"><b style="font:700 16px/1 Hahmlet,serif">약 45만 엔</b> <span style="font-size:12.5px;color:#6F675E">≈ 426만 원</span></span></div>
+<div class="daily-budget" style="margin-top:12px;display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding-top:12px;border-top:1px solid #E5DCCD"><span style="font-size:13px;color:#6F675E">일본 현지 당일 배정액 · 차량비 절반·숙박·가족탕 포함</span><span style="white-space:nowrap"><b style="font:700 16px/1 Hahmlet,serif">약 45만 엔</b> <span style="font-size:12.5px;color:#6F675E">≈ 426만 원</span></span></div>
 </article>
 
 <article id="day3" data-screen-label="3일차" style="margin-top:44px;scroll-margin-top:64px">
@@ -335,7 +352,7 @@ a{color:#8E3A1E}a:hover{color:#C2522C}
 <p style="margin:14px 0 0;font-size:14px;line-height:1.7;color:#5E5750;text-wrap:pretty">우미지옥은 온천 경관을 <b style="color:#23201C">관람하는 장소</b>이며 목욕시설 이용권과 다릅니다. 입장료 500엔, 운영시간 8~17시.</p>
 <div style="margin-top:14px;padding:14px 16px;background:#EEE6D8;border-radius:12px;font-size:13.5px;line-height:1.65;color:#3A342E"><b>하루 운영</b> · 도보 약 2~3km. 부모님이 피곤하거나 비바람이 강하면 우미지옥을 생략하고 호텔에서 더 쉬거나 실내 점심 장소로 바로 이동합니다. <b>지옥 7곳 완주는 넣지 않습니다.</b> 도로 차질 시 운행 중인 철도편을 검토할 수 있지만 10인 지정석 확보는 별개이며, 도로와 철도 모두 차질이 있으면 숙박 연장과 항공사·보험사 연락을 우선합니다.</div>
 <div style="margin-top:10px;font-size:13.5px;line-height:1.6;color:#5E5750"><b style="color:#23201C">젊은 가족의 포인트</b> · 우미지옥 사진, 후쿠오카에서 기념 만찬</div>
-<div style="margin-top:12px;display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding-top:12px;border-top:1px solid #E5DCCD"><span style="font-size:13px;color:#6F675E">일본 현지 당일 배정액 · 숙박·차량비 절반·기념식사 포함</span><span style="white-space:nowrap"><b style="font:700 16px/1 Hahmlet,serif">약 33만 엔</b> <span style="font-size:12.5px;color:#6F675E">≈ 317만 원</span></span></div>
+<div class="daily-budget" style="margin-top:12px;display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding-top:12px;border-top:1px solid #E5DCCD"><span style="font-size:13px;color:#6F675E">일본 현지 당일 배정액 · 숙박·차량비 절반·기념식사 포함</span><span style="white-space:nowrap"><b style="font:700 16px/1 Hahmlet,serif">약 33만 엔</b> <span style="font-size:12.5px;color:#6F675E">≈ 317만 원</span></span></div>
 </article>
 
 <article id="day4" data-screen-label="4일차" style="margin-top:44px;scroll-margin-top:64px">
@@ -363,7 +380,7 @@ a{color:#8E3A1E}a:hover{color:#C2522C}
 </div>
 <div style="margin-top:14px;padding:14px 16px;background:#EEE6D8;border-radius:12px;font-size:13.5px;line-height:1.65;color:#3A342E"><b>하루 운영</b> · 쇼핑조 약 4~6km, 휴식조 약 1~3km. 비·강풍이면 공원을 빼고 실내 상업시설과 호텔 휴식만 진행합니다. 지연 시 가장 먼저 제외할 것은 공원입니다.</div>
 <div style="margin-top:10px;font-size:13.5px;line-height:1.6;color:#5E5750"><b style="color:#23201C">젊은 가족의 포인트</b> · 하루 중 가장 긴 자유 쇼핑·카페 시간</div>
-<div style="margin-top:12px;display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding-top:12px;border-top:1px solid #E5DCCD"><span style="font-size:13px;color:#6F675E">일본 현지 당일 배정액 · 숙박 포함</span><span style="white-space:nowrap"><b style="font:700 16px/1 Hahmlet,serif">약 24만 엔</b> <span style="font-size:12.5px;color:#6F675E">≈ 226만 원</span></span></div>
+<div class="daily-budget" style="margin-top:12px;display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding-top:12px;border-top:1px solid #E5DCCD"><span style="font-size:13px;color:#6F675E">일본 현지 당일 배정액 · 숙박 포함</span><span style="white-space:nowrap"><b style="font:700 16px/1 Hahmlet,serif">약 24만 엔</b> <span style="font-size:12.5px;color:#6F675E">≈ 226만 원</span></span></div>
 </article>
 
 <article id="day5" data-screen-label="5일차" style="margin-top:44px;scroll-margin-top:64px">
@@ -383,7 +400,7 @@ a{color:#8E3A1E}a:hover{color:#C2522C}
 <p style="margin:14px 0 0;font-size:14px;line-height:1.7;color:#5E5750;text-wrap:pretty">2026년 11월 1일 이후 일본 면세 쇼핑은 <b style="color:#23201C">세금 포함 가격으로 구매한 뒤 출국 시 반출 확인을 거쳐 환급받는 방식</b>으로 바뀝니다. 면세 구매 물품을 확인할 수 있도록 준비하고 공항에 여유 있게 도착합니다. 수하물 위탁 전후 절차와 단말 위치는 출발 전 공항 안내로 확인합니다.</p>
 <div style="margin-top:14px;padding:14px 16px;background:#EEE6D8;border-radius:12px;font-size:13.5px;line-height:1.65;color:#3A342E"><b>하루 운영</b> · 도보 약 2~3km, 관광지는 추가하지 않습니다. 비·교통 지연이 예상되면 점심 이후 바로 공항으로 이동합니다. 가장 먼저 제외할 것은 마지막 쇼핑입니다.</div>
 <div style="margin-top:10px;font-size:13.5px;line-height:1.6;color:#5E5750"><b style="color:#23201C">젊은 가족의 포인트</b> · 선물 마무리와 가족사진 고르기</div>
-<div style="margin-top:12px;display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding-top:12px;border-top:1px solid #E5DCCD"><span style="font-size:13px;color:#6F675E">일본 현지 당일 배정액</span><span style="white-space:nowrap"><b style="font:700 16px/1 Hahmlet,serif">약 6만 엔</b> <span style="font-size:12.5px;color:#6F675E">≈ 59만 원</span></span></div>
+<div class="daily-budget" style="margin-top:12px;display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding-top:12px;border-top:1px solid #E5DCCD"><span style="font-size:13px;color:#6F675E">일본 현지 당일 배정액</span><span style="white-space:nowrap"><b style="font:700 16px/1 Hahmlet,serif">약 6만 엔</b> <span style="font-size:12.5px;color:#6F675E">≈ 59만 원</span></span></div>
 </article>
 </section>
 <sc-if value="{{ full }}" hint-placeholder-val="{{ true }}">
@@ -423,12 +440,12 @@ a{color:#8E3A1E}a:hover{color:#C2522C}
 <p style="margin:8px 0 0;font-size:15px;line-height:1.75;color:#3A342E;text-wrap:pretty">대욕장·노천탕 외에 수영복을 입고 이용하는 아쿠아가든과 실내 놀이 선택지가 있습니다. <b>아쿠아비트는 여름 운영 시설이므로 2월 일정에 넣지 않았고</b>, 겨울철 아쿠아가든은 날씨·점검일을 확인해 희망자만 참여합니다.</p>
 <div style="margin-top:14px;padding:4px 18px;background:#FFFDF9;border:1px solid #E5DCCD;border-radius:16px">
 <div style="padding:12px 0 6px;font-size:13px;font-weight:700;letter-spacing:.04em;color:#8E3A1E">별도 가족탕 ‘오이타 고토’</div><a class="candidate-detail-link" href="https://suginoi.orixhotelsandresorts.com/contents/oitagoto/" target="_blank" rel="noopener noreferrer">오이타 고토 가족탕 상세페이지 ↗</a>
-<div style="display:grid;grid-template-columns:84px 1fr;gap:12px;padding:11px 0;border-top:1px solid #EFE8DC;font-size:14.5px;line-height:1.55"><span style="color:#6F675E;font-size:13px;padding-top:1px">구성</span><span>가족탕 5개, 1회 60분</span></div>
-<div style="display:grid;grid-template-columns:84px 1fr;gap:12px;padding:11px 0;border-top:1px solid #EFE8DC;font-size:14.5px;line-height:1.55"><span style="color:#6F675E;font-size:13px;padding-top:1px">평일</span><span><b>4,100엔</b> · 약 3만 9천 원</span></div>
-<div style="display:grid;grid-template-columns:84px 1fr;gap:12px;padding:11px 0;border-top:1px solid #EFE8DC;font-size:14.5px;line-height:1.55"><span style="color:#6F675E;font-size:13px;padding-top:1px">토·일·공휴일</span><span><b>5,100엔</b></span></div>
-<div style="display:grid;grid-template-columns:84px 1fr;gap:12px;padding:11px 0;border-top:1px solid #EFE8DC;font-size:14.5px;line-height:1.55"><span style="color:#6F675E;font-size:13px;padding-top:1px">예약</span><span><b>당일 예약</b>, 전용 접수처·전화 이용</span></div>
-<div style="display:grid;grid-template-columns:84px 1fr;gap:12px;padding:11px 0;border-top:1px solid #EFE8DC;font-size:14.5px;line-height:1.55"><span style="color:#6F675E;font-size:13px;padding-top:1px">이번 여행</span><span>2월 25일 목요일, 일반탕 3회 기준 <b>12,300엔</b></span></div>
-<div style="display:grid;grid-template-columns:84px 1fr;gap:12px;padding:11px 0;border-top:1px solid #EFE8DC;font-size:14.5px;line-height:1.55"><span style="color:#6F675E;font-size:13px;padding-top:1px">확인할 것</span><span>각 탕의 정원, 원하는 시간대 확보, 2027년 특별요금 적용 여부</span></div>
+<div class="plan-fact-row" style="display:grid;grid-template-columns:84px 1fr;gap:12px;padding:11px 0;border-top:1px solid #EFE8DC;font-size:14.5px;line-height:1.55"><span style="color:#6F675E;font-size:13px;padding-top:1px">구성</span><span>가족탕 5개, 1회 60분</span></div>
+<div class="plan-fact-row" style="display:grid;grid-template-columns:84px 1fr;gap:12px;padding:11px 0;border-top:1px solid #EFE8DC;font-size:14.5px;line-height:1.55"><span style="color:#6F675E;font-size:13px;padding-top:1px">평일</span><span><b>4,100엔</b> · 약 3만 9천 원</span></div>
+<div class="plan-fact-row" style="display:grid;grid-template-columns:84px 1fr;gap:12px;padding:11px 0;border-top:1px solid #EFE8DC;font-size:14.5px;line-height:1.55"><span style="color:#6F675E;font-size:13px;padding-top:1px">토·일·공휴일</span><span><b>5,100엔</b></span></div>
+<div class="plan-fact-row" style="display:grid;grid-template-columns:84px 1fr;gap:12px;padding:11px 0;border-top:1px solid #EFE8DC;font-size:14.5px;line-height:1.55"><span style="color:#6F675E;font-size:13px;padding-top:1px">예약</span><span><b>당일 예약</b>, 전용 접수처·전화 이용</span></div>
+<div class="plan-fact-row" style="display:grid;grid-template-columns:84px 1fr;gap:12px;padding:11px 0;border-top:1px solid #EFE8DC;font-size:14.5px;line-height:1.55"><span style="color:#6F675E;font-size:13px;padding-top:1px">이번 여행</span><span>2월 25일 목요일, 일반탕 3회 기준 <b>12,300엔</b></span></div>
+<div class="plan-fact-row" style="display:grid;grid-template-columns:84px 1fr;gap:12px;padding:11px 0;border-top:1px solid #EFE8DC;font-size:14.5px;line-height:1.55"><span style="color:#6F675E;font-size:13px;padding-top:1px">확인할 것</span><span>각 탕의 정원, 원하는 시간대 확보, 2027년 특별요금 적용 여부</span></div>
 </div>
 <p style="margin:14px 0 0;font-size:15px;line-height:1.75;color:#3A342E;text-wrap:pretty">가족 10명이 한 탕에 들어갈 수 있다고 확인된 것은 아니므로 2명·4명·4명 등으로 나누는 방식도 각 탕의 정원을 확인한 뒤 정합니다. 공동 목욕을 원하지 않는 가족은 가족탕, 객실 휴식, 볼링 등으로 나누면 됩니다. 당일 가족탕이 매진되더라도 여행 전체가 실패하지 않도록 <b>가족탕 예약 성공을 필수 전제로 삼지 않습니다.</b></p>
 
@@ -757,16 +774,34 @@ class Component extends DCLogic {
   mainRef = React.createRef();
   componentDidMount() {
     try { const raw = localStorage.getItem(LS_KEY); if (raw) this.setState({ checks: JSON.parse(raw) }); } catch (e) {}
-    this._io = new IntersectionObserver((entries) => {
-      let hit = null;
-      entries.forEach((en) => { if (en.isIntersecting) hit = en.target.id; });
-      if (hit) this._setActive(hit);
-    }, { rootMargin: '-12% 0px -78% 0px', threshold: 0 });
-    NAV_IDS.forEach((id) => { const el = document.getElementById(id); if (el) this._io.observe(el); });
+    this._syncNavigation = () => {
+      const nav = document.querySelector('[data-plan-nav]');
+      const main = this.mainRef.current;
+      if (!nav || !main) return;
+      main.style.setProperty('--plan-nav-height', nav.offsetHeight + 'px');
+      if (this._io) this._io.disconnect();
+      const top = Math.min(nav.getBoundingClientRect().height + 16, window.innerHeight - 2);
+      const bottom = Math.max(0, window.innerHeight - top - 1);
+      this._io = new IntersectionObserver((entries) => {
+        let hit = null;
+        entries.forEach((entry) => { if (entry.isIntersecting) hit = entry.target.id; });
+        if (hit) this._setActive(hit);
+      }, { rootMargin: '-' + top + 'px 0px -' + bottom + 'px 0px', threshold: 0 });
+      NAV_IDS.forEach((id) => { const el = document.getElementById(id); if (el) this._io.observe(el); });
+    };
+    this._navResize = new ResizeObserver(this._syncNavigation);
+    const nav = document.querySelector('[data-plan-nav]');
+    if (nav) this._navResize.observe(nav);
+    window.addEventListener('resize', this._syncNavigation);
+    this._syncNavigation();
     this._applyZoom();
   }
   componentDidUpdate() { this._applyZoom(); }
-  componentWillUnmount() { if (this._io) this._io.disconnect(); }
+  componentWillUnmount() {
+    if (this._io) this._io.disconnect();
+    if (this._navResize) this._navResize.disconnect();
+    window.removeEventListener('resize', this._syncNavigation);
+  }
   _applyZoom() {
     const el = this.mainRef.current; if (!el) return;
     el.style.zoom = (this.props.textSize ?? '보통') === '크게' ? '1.14' : '';
@@ -779,7 +814,7 @@ class Component extends DCLogic {
       a.setAttribute('aria-current', on ? 'true' : 'false');
       if (on) target = a;
     });
-    if (target) nav.scrollTo({ left: Math.max(0, target.offsetLeft - 16), behavior: 'smooth' });
+    if (target && nav.scrollWidth > nav.clientWidth) nav.scrollTo({ left: Math.max(0, target.offsetLeft - 16), behavior: 'smooth' });
   }
   renderVals() {
     const full = (this.props.mode ?? '전체') !== '일정 중심';
