@@ -9,7 +9,8 @@
     "license": "CC BY-SA 4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
     "date": "2009-11-18 05:47:39",
-    "changes": "Wikimedia thumbnail; displayed with responsive CSS cropping. No retouching."
+    "changes": "Wikimedia thumbnail; displayed with responsive CSS cropping. No retouching.",
+    "displayed": true
   },
   {
     "slot": "day1-photo",
@@ -21,7 +22,8 @@
     "license": "CC BY-SA 4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
     "date": "2018-05-11 19:46:55",
-    "changes": "Wikimedia thumbnail; displayed with responsive CSS cropping. No retouching."
+    "changes": "Wikimedia thumbnail; displayed with responsive CSS cropping. No retouching.",
+    "displayed": true
   },
   {
     "slot": "day2-photo",
@@ -33,7 +35,8 @@
     "license": "CC BY 3.0",
     "license_url": "https://creativecommons.org/licenses/by/3.0",
     "date": "2009-02-08",
-    "changes": "Wikimedia thumbnail; displayed with responsive CSS cropping. No retouching."
+    "changes": "Wikimedia thumbnail; displayed with responsive CSS cropping. No retouching.",
+    "displayed": true
   },
   {
     "slot": "day3-photo",
@@ -45,7 +48,8 @@
     "license": "CC BY-SA 3.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
     "date": "2007-03",
-    "changes": "Wikimedia thumbnail; displayed with responsive CSS cropping. No retouching."
+    "changes": "Wikimedia thumbnail; displayed with responsive CSS cropping. No retouching.",
+    "displayed": true
   },
   {
     "slot": "day4-photo",
@@ -57,7 +61,8 @@
     "license": "CC BY-SA 4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
     "date": "2015-09-27 16:03:51",
-    "changes": "Wikimedia thumbnail; displayed with responsive CSS cropping. No retouching."
+    "changes": "Wikimedia thumbnail; displayed with responsive CSS cropping. No retouching.",
+    "displayed": true
   },
   {
     "slot": "day5-photo",
@@ -69,7 +74,8 @@
     "license": "CC BY-SA 2.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
     "date": "30 March 2025",
-    "changes": "Wikimedia thumbnail; displayed with responsive CSS cropping. No retouching."
+    "changes": "Wikimedia thumbnail; displayed with responsive CSS cropping. No retouching.",
+    "displayed": true
   },
   {
     "slot": "hotel-fukuoka-photo",
@@ -81,7 +87,8 @@
     "license": "CC BY-SA 4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
     "date": "2023-08-01 15:31:11",
-    "changes": "Wikimedia thumbnail; displayed with responsive CSS cropping. No retouching."
+    "changes": "Wikimedia thumbnail; displayed with responsive CSS cropping. No retouching.",
+    "displayed": true
   },
   {
     "slot": "hotel-beppu-photo",
@@ -93,7 +100,8 @@
     "license": "CC BY-SA 3.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
     "date": "2011-10-20",
-    "changes": "Wikimedia thumbnail; displayed with responsive CSS cropping. No retouching."
+    "changes": "Wikimedia thumbnail; displayed with responsive CSS cropping. No retouching.",
+    "displayed": true
   },
   {
     "slot": "candidate-blossom",
@@ -105,7 +113,8 @@
     "license": "CC BY-SA 4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
     "date": "2020-10-05",
-    "changes": "Wikimedia thumbnail; responsive CSS crop in cards, full composition in enlargement. No retouching."
+    "changes": "Wikimedia thumbnail; no retouching.",
+    "displayed": false
   },
   {
     "slot": "candidate-nikko",
@@ -117,7 +126,8 @@
     "license": "CC BY-SA 4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
     "date": "2023-09-07 16:44:19",
-    "changes": "Wikimedia thumbnail; responsive CSS crop in cards, full composition in enlargement. No retouching."
+    "changes": "Wikimedia thumbnail; no retouching.",
+    "displayed": false
   },
   {
     "slot": "candidate-kamenoi",
@@ -129,7 +139,8 @@
     "license": "CC BY-SA 3.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
     "date": "2010-05-02",
-    "changes": "Wikimedia thumbnail; responsive CSS crop in cards, full composition in enlargement. No retouching."
+    "changes": "Wikimedia thumbnail; no retouching.",
+    "displayed": false
   },
   {
     "slot": "candidate-hyotan",
@@ -141,7 +152,8 @@
     "license": "CC BY-SA 2.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
     "date": "2010-09-11 18:35",
-    "changes": "Wikimedia thumbnail; responsive CSS crop in cards, full composition in enlargement. No retouching."
+    "changes": "Wikimedia thumbnail; no retouching.",
+    "displayed": false
   },
   {
     "slot": "candidate-seikai",
@@ -152,6 +164,7 @@
     "image_url": "https://www.seikai.co.jp/download/images/preview/room20.jpg",
     "license": "Official downloadable material. Copyright retained; commercial use requires contacting the hotel. Used here for a noncommercial family travel plan.",
     "license_url": "https://www.seikai.co.jp/download/",
-    "changes": "Official preview file, unchanged; CSS crop for thumbnail and full composition in enlargement."
+    "changes": "Official preview file, unchanged; displayed responsively at its original aspect ratio.",
+    "displayed": true
   }
 ]
