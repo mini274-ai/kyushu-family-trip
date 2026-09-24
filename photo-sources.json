@@ -94,5 +94,64 @@
     "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
     "date": "2011-10-20",
     "changes": "Wikimedia thumbnail; displayed with responsive CSS cropping. No retouching."
+  },
+  {
+    "slot": "candidate-blossom",
+    "file": "kyushu-candidate-blossom.jpg",
+    "caption": "블러섬 하카타 중앙 · 외관",
+    "title": "花博博多中央.jpg",
+    "author": "JR九州酒店",
+    "source": "https://commons.wikimedia.org/wiki/File:%E8%8A%B1%E5%8D%9A%E5%8D%9A%E5%A4%9A%E4%B8%AD%E5%A4%AE.jpg",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "date": "2020-10-05",
+    "changes": "Wikimedia thumbnail; responsive CSS crop in cards, full composition in enlargement. No retouching."
+  },
+  {
+    "slot": "candidate-nikko",
+    "file": "kyushu-candidate-nikko.jpg",
+    "caption": "호텔 닛코 후쿠오카 · 외관",
+    "title": "Hotel Nikkō Fukuoka 18-25 Hakata-ekimae 2-chōme Hakata-ku Fukuoka 20230907.jpg",
+    "author": "Hirho",
+    "source": "https://commons.wikimedia.org/wiki/File:Hotel_Nikk%C5%8D_Fukuoka_18-25_Hakata-ekimae_2-ch%C5%8Dme_Hakata-ku_Fukuoka_20230907.jpg",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "date": "2023-09-07 16:44:19",
+    "changes": "Wikimedia thumbnail; responsive CSS crop in cards, full composition in enlargement. No retouching."
+  },
+  {
+    "slot": "candidate-kamenoi",
+    "file": "kyushu-candidate-kamenoi.jpg",
+    "caption": "가메노이 호텔 벳푸 · 외관",
+    "title": "Beppu kamemoi hotel.jpg",
+    "author": "大分帰省中",
+    "source": "https://commons.wikimedia.org/wiki/File:Beppu_kamemoi_hotel.jpg",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "date": "2010-05-02",
+    "changes": "Wikimedia thumbnail; responsive CSS crop in cards, full composition in enlargement. No retouching."
+  },
+  {
+    "slot": "candidate-hyotan",
+    "file": "kyushu-candidate-hyotan.jpg",
+    "caption": "효탄온천 · 입구 풍경",
+    "title": "Hyotan Onsen (5011201676).jpg",
+    "author": "Jordi Sanchez Teruel from Seúl, South Korea",
+    "source": "https://commons.wikimedia.org/wiki/File:Hyotan_Onsen_(5011201676).jpg",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+    "date": "2010-09-11 18:35",
+    "changes": "Wikimedia thumbnail; responsive CSS crop in cards, full composition in enlargement. No retouching."
+  },
+  {
+    "slot": "candidate-seikai",
+    "file": "kyushu-candidate-seikai.jpg",
+    "caption": "세이카이 · 바다동 객실 노천탕 예시(사각형)",
+    "author": "AMANE RESORT SEIKAI",
+    "source": "https://www.seikai.co.jp/download/",
+    "image_url": "https://www.seikai.co.jp/download/images/preview/room20.jpg",
+    "license": "Official downloadable material. Copyright retained; commercial use requires contacting the hotel. Used here for a noncommercial family travel plan.",
+    "license_url": "https://www.seikai.co.jp/download/",
+    "changes": "Official preview file, unchanged; CSS crop for thumbnail and full composition in enlargement."
   }
 ]
